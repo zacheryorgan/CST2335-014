@@ -7,4 +7,5 @@
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="enable">Enable something</string>
+    <string name="login_button">Login</string>
 </resources>

@@ -17,16 +17,16 @@
         android:layout_columnWeight="1"
         android:gravity="fill" />
     <CheckBox
-
+        android:id="@+id/check"
         android:layout_columnWeight="1"
         android:gravity="fill"/>
     <Switch
-
+        android:id="@+id/switch1"
         android:text="@string/enable"
         android:layout_columnWeight="1"
         android:gravity="fill"/>
     <ImageButton
-
+        android:id="@+id/image1"
         android:background="@android:drawable/btn_star_big_on"
         android:layout_columnWeight="1"
         android:gravity="fill"/>
