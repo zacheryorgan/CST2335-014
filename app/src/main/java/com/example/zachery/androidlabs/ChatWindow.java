@@ -1,6 +1,7 @@
 package com.example.zachery.androidlabs;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,26 +20,28 @@ public class ChatWindow extends AppCompatActivity {
 
 
     public ArrayList<String> messages = new ArrayList<String>();
-
-
-
-
+    ChatDatabaseHelper dbHelper;
+    SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_window);
 
+
+
         final EditText editSend = (EditText)findViewById(R.id.editSend);
         final Button send = (Button)findViewById(R.id.send);
         final ListView listView = (ListView)findViewById(R.id.listView);
-
         final ChatAdapter messageAdapter = new ChatAdapter(this);
 
+        dbHelper = new ChatDatabaseHelper(this);
 
-
+        database = dbHelper.getWritableDatabase();
 
         listView.setAdapter(messageAdapter);
+
+
 
 
 
